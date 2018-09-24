@@ -107,13 +107,13 @@ def main(sway, width):
         text = next(visualiser)
         start = time.time()
 
-            # print in accordance to the i3bar input protocol
-            print(f'[{{"full_text": "{text}", "align": "center", "min_width": 1920}}],', flush=True)
+        # print in accordance to the i3bar input protocol
+        print(f'[{{"full_text": "{text}", "align": "center", "min_width": 1920}}],', flush=True)
 
-            # tell the visualiser that if there is no audio
-            # it can keep waiting for new audio
-            # instead of constantly sending back empty bar_heights
-            text = visualiser.send(set(text) == {' '})
+        # tell the visualiser that if there is no audio
+        # it can keep waiting for new audio
+        # instead of constantly sending back empty bar_heights
+        text = visualiser.send(set(text) == {' '})
     else:
         # simple output
         while True:

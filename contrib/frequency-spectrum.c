@@ -55,7 +55,7 @@ float equal_loudness_curve_high(float f) {
 
 void *run(void *arguments) {
     // unpack arguments
-    struct args_struct *args = (struct args_struct *) arguments;
+    struct args_struct *args = (struct args_struct *)arguments;
     int width = args->width;
     float *bar_heights = args->bar_heights;
     float *bar_peaks = args->bar_peaks;
